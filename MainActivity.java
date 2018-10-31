@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        inserEstu = (Button) findViewById(R.id.btnInsertar2);
-        inserProfe = (Button) findViewById(R.id.btnInsertar);
+        inserEstu = (Button) findViewById(R.id.btnInsertar);
+        inserProfe = (Button) findViewById(R.id.btnInsertar2);
         enviar = (Button) findViewById(R.id.btnRegister);
         recuperar = (Button) findViewById(R.id.btnRecuperar);
         nombre = (EditText) findViewById(R.id.txtUserName);

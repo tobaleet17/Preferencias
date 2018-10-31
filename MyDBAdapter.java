@@ -57,7 +57,7 @@ public class MyDBAdapter {
 
     }
 
-    public void insertarEstudiantes(String nom, int age, String cicl, String curs, float nota){
+    public void insertarEstudiantes(String nom, String age, String cicl, String curs, String nota){
         //Creamos el content values para después con el PUT añadir cada valor en su tabla
         ContentValues newEstudiantes = new ContentValues();
 
@@ -71,6 +71,22 @@ public class MyDBAdapter {
 
 
     }
+    public void insertarProfesores(String nom, int age, String cicl, String curs, float despacho){
+        //Creamos el content values para después con el PUT añadir cada valor en su tabla
+        ContentValues newProfesores = new ContentValues();
+
+        newProfesores.put(NOMBRE,nom);
+        newProfesores.put(EDAD,age);
+        newProfesores.put(CICLO,cicl);
+        newProfesores.put(CURSO,curs);
+        newProfesores.put(DESPACHO,despacho);
+
+        db.insert(TABLA_PROFESORES,null,newProfesores);
+
+
+    }
+
+
 
     private static class MyDbHelper extends SQLiteOpenHelper{
 
